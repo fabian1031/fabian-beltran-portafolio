@@ -1,0 +1,186 @@
+/* ==========================================================================
+   DEFINICIÓN DE VARIABLES (Design Tokens)
+   ========================================================================== */
+:root {
+    /* Colores base */
+    --deep-black: #0B0E11;
+    --carbon: #1E2329;
+    --neon-blue: #00D1FF;
+    --electric-purple: #7B61FF;
+    --lime: #C1FF72;
+    --border-gray: #2B3139;
+    --muted-gray: #848E9C;
+    --white: #FFFFFF;
+
+    /* Efectos de Brillo y Capas */
+    --bg-overlay: rgba(11, 14, 17, 0.85);
+    --neon-blue-glow: rgba(0, 209, 255, 0.3);
+    --neon-blue-soft: rgba(0, 209, 255, 0.1);
+    --white-soft: rgba(255, 255, 255, 0.05);
+    --white-border: rgba(255, 255, 255, 0.1);
+
+    /* Filtros para Imágenes SVG (icon-filters) */
+    --filter-muted: invert(61%) sepia(10%) saturate(461%) hue-rotate(176deg) brightness(89%) contrast(85%);
+    --filter-neon: invert(62%) sepia(98%) saturate(3025%) hue-rotate(155deg) brightness(101%) contrast(101%);
+    --filter-lime: invert(89%) sepia(21%) saturate(913%) hue-rotate(36deg) brightness(106%) contrast(101%);
+    --filter-white: brightness(0) invert(1);
+
+    /* Animaciones */
+    --transition-slow: all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1);
+    --transition-normal: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   IMPORTACIÓN DE FUENTES (LOCAL)
+   ========================================================================== */
+
+/* Space Grotesk (Sans) */
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-v22-latin-300.woff2') format('woff2');
+    font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-v22-latin-regular.woff2') format('woff2');
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-v22-latin-500.woff2') format('woff2');
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-v22-latin-600.woff2') format('woff2');
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-v22-latin-700.woff2') format('woff2');
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* IBM Plex Mono (Monospace) */
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/ibm-plex-mono-v20-latin-regular.woff2') format('woff2');
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/ibm-plex-mono-v20-latin-700.woff2') format('woff2');
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* ==========================================================================
+   ESTILOS BASE
+   ========================================================================== */
+
+body { 
+    background-color: var(--deep-black); 
+    color: var(--white); 
+    overflow-x: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.mono {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ==========================================================================
+   COMPONENTES Y UTILIDADES
+   ========================================================================== */
+
+/* Efecto de Aparición al Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: var(--transition-slow);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Background con Rejilla Técnica */
+.hero-dot-grid {
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Efecto de Brillo Neon */
+.neon-glow { 
+    text-shadow: 0 0 15px var(--neon-blue-glow); 
+}
+
+/* Anillos de Habilidades */
+.skill-ring {
+    background: var(--white-soft);
+    border: 1px solid var(--white-border);
+    transition: var(--transition-normal);
+}
+.skill-ring:hover {
+    border-color: var(--neon-blue);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px -10px var(--neon-blue-glow);
+    background: var(--neon-blue-soft);
+}
+
+/* Líneas laterales Sidebar */
+.social-line::before, 
+.social-line::after { 
+    content: ''; 
+    width: 1px; 
+    background: var(--border-gray); 
+}
+
+/* Menú Móvil */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease;
+    opacity: 0;
+}
+#mobile-menu.open { 
+    max-height: 600px; 
+    opacity: 1; 
+}
+
+/* Tarjetas con Efecto de Escaneo */
+.card-scan { 
+    position: relative; 
+    overflow: hidden; 
+}
+.card-scan::after {
+    content: ""; 
+    position: absolute; 
+    top: -100%; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 209, 255, 0.08), transparent);
+    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-scan:hover::after { 
+    top: 100%; 
+}
+
+/* ==========================================================================
+   LÓGICA DE ICONOS (Filtros para <img> SVG)
+   ========================================================================== */
+
+/* Estado inicial: Muted */
+.icon-local {
+    filter: var(--filter-muted);
+    transition: var(--transition-normal);
+}
+
+/* Variaciones en Hover (Requiere clase .group en el padre <a>) */
+.group:hover .hover-neon  { filter: var(--filter-neon) !important; }
+.group:hover .hover-lime  { filter: var(--filter-lime) !important; }
+.group:hover .hover-white { filter: var(--filter-white) !important; }
+
+/* Icono blanco fijo (si se requiere) */
+.icon-white { filter: var(--filter-white); }
