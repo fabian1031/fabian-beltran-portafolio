@@ -14,25 +14,37 @@
 
     <!-- BARRA DE NAVEGACION FIJA (NAV) -->
     <nav class="fixed top-0 w-full z-[100] bg-deepBlack/80 backdrop-blur-md border-b border-border">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center text-white">
-            <div class="text-2xl font-black tracking-tighter uppercase">
-                F<span class="text-neonBlue italic font-bold">B</span>
-            </div>
-            <!-- Enlaces de navegacion principal -->
-            <div class="hidden md:flex gap-10 mono text-[10px] uppercase tracking-[0.2em] font-bold">
-                <a href="#habilidades" class="hover:text-neonBlue transition-all">Habilidades</a>
-                <a href="#titulos" class="hover:text-neonBlue transition-all">Titulos</a>
-                <a href="#proyectos" class="hover:text-neonBlue transition-all">Proyectos</a>
-                <a href="#contacto" class="text-lime border border-lime/40 px-5 py-1.5 rounded-full hover:bg-lime hover:text-deepBlack transition-all font-black uppercase tracking-widest">Contacto</a>
-            </div>
-            <!-- Menu para dispositivos moviles -->
-            <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none">
-                <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="line1"></span>
-                <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="line2"></span>
-                <span class="block w-4 h-0.5 bg-neonBlue transition-all duration-300 self-end" id="line3"></span>
-            </button>
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center text-white">
+        <div class="text-2xl font-black tracking-tighter uppercase">
+            F<span class="text-neonBlue italic font-bold">B</span>
         </div>
-    </nav>
+        
+        <!-- Enlaces escritorio -->
+        <div class="hidden md:flex gap-10 mono text-[10px] uppercase tracking-[0.2em] font-bold">
+            <a href="#habilidades" class="hover:text-neonBlue transition-all">Habilidades</a>
+            <a href="#titulos" class="hover:text-neonBlue transition-all">Titulos</a>
+            <a href="#proyectos" class="hover:text-neonBlue transition-all">Proyectos</a>
+            <a href="#contacto" class="text-lime border border-lime/40 px-5 py-1.5 rounded-full hover:bg-lime hover:text-deepBlack transition-all font-black uppercase tracking-widest">Contacto</a>
+        </div>
+
+        <!-- Boton Menu Hamburguesa -->
+        <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none">
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="line1"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all duration-300" id="line2"></span>
+            <span class="block w-4 h-0.5 bg-neonBlue transition-all duration-300 self-end" id="line3"></span>
+        </button>
+    </div>
+
+    <!-- BLOQUE FALTANTE: Contenedor del menu movil -->
+    <div id="mobile-menu" class="md:hidden bg-carbon border-t border-border overflow-hidden">
+        <div class="flex flex-col p-8 gap-6 text-center">
+            <a href="#habilidades" class="mobile-nav-link text-lg uppercase tracking-widest font-bold">Habilidades</a>
+            <a href="#titulos" class="mobile-nav-link text-lg uppercase tracking-widest font-bold">Titulos</a>
+            <a href="#proyectos" class="mobile-nav-link text-lg uppercase tracking-widest font-bold">Proyectos</a>
+            <a href="#contacto" class="mobile-nav-link text-lime text-lg uppercase tracking-widest font-bold border-t border-border/20 pt-4">Contacto</a>
+        </div>
+    </div>
+</nav>
 
     <!-- BARRA LATERAL SOCIAL (ASIDE) -->
     <aside class="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center gap-6 social-line">
