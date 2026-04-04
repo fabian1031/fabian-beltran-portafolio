@@ -74,14 +74,16 @@ Al final puse mi logo otra vez y un mensaje de cierre. Tambien agregue un estado
 
 ```text
 /
-├── index.html          # Estructura semantica principal
-├── css/
-│   └── style.css       # Variables, fuentes y efectos de filtros
-├── js/
-│   ├── script.js       # Logica de UI y configuracion de Tailwind
-│   └── tailwind.min.js # Motor de estilos local (Opcional)
-├── fonts/              # Archivos de fuentes locales .woff2
 ├── assets/
-│   ├── icons/          # Iconos .svg locales (Linkedin, Github, etc.)
-│   └── fondo.png       # Imagenes de fondo del sitio
-└── favicon/            # Recursos de identidad del sitio
+│   └── icons/          # Todos los iconos .svg (Java, Python, Redes, etc.)
+├── css/
+│   └── style.css       # Estilos, variables y configuracion de fuentes
+├── favicon/
+│   └── favicon_base.png # Icono para la pestaña del navegador
+├── fonts/              # Archivos de las letras locales (.woff2)
+├── js/
+│   └── script.js       # Logica del menu y animaciones de la pagina
+├── wireframe/
+│   └── image.png       # Imagen de referencia del diseño
+├── index.html          # El archivo principal con todo el contenido
+└── readme.md           # Este archivo con la explicacion del proyecto
