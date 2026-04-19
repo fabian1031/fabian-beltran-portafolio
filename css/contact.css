@@ -1,0 +1,67 @@
+/* ================================
+   CONTACT — Sección de contacto
+   ================================ */
+
+.contact-intro {
+    max-width: 480px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #94a3b8 !important;
+}
+
+.contact-item {
+    background: var(--bg-card);
+    padding: 25px 35px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+.contact-item:hover          { transform: translateX(10px); border-color: var(--cyan); }
+.contact-item.accent-lime:hover   { border-color: var(--lime); }
+.contact-item.accent-purple:hover { border-color: var(--purple); }
+
+/* Fix colores Bootstrap */
+.contact-item h3,
+.contact-item .num { color: var(--text-main) !important; }
+.num               { color: var(--cyan) !important; }
+.contact-val       { font-size: 13px; color: #64748b !important; font-weight: 500; }
+.contact-arrow     { color: #475569; }
+
+/* Ícono */
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--bg-dark);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    flex-shrink: 0;
+}
+.contact-item:hover .contact-icon             { color: var(--cyan);   border-color: rgba(0,209,255,0.3); }
+.contact-item.accent-lime:hover .contact-icon { color: var(--lime);   border-color: rgba(193,255,114,0.3); }
+.contact-item.accent-purple:hover .contact-icon { color: var(--purple); border-color: rgba(123,97,255,0.3); }
+
+/* Botón descargar CV */
+.btn-cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--bg-dark);
+    background: var(--lime);
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    letter-spacing: 0.3px;
+}
+.btn-cv-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(193, 255, 114, 0.2);
+}

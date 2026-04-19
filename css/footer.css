@@ -1,0 +1,51 @@
+/* ================================
+   FOOTER
+   ================================ */
+
+.footer {
+    background: var(--bg-alt);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Fix colores Bootstrap */
+.footer,
+.footer p,
+.footer span,
+.footer a,
+.footer li,
+.footer-bio,
+.footer-links a,
+.footer-status span { color: #94a3b8 !important; }
+
+.footer-heading { font-size: 11px; letter-spacing: 1.5px; color: #475569 !important; font-weight: 700; }
+
+.footer .brand-logo       { color: var(--text-main) !important; }
+.footer .brand-logo span  { color: var(--cyan) !important; }
+.footer .text-cyan        { color: var(--cyan) !important; }
+
+.footer-bio {
+    line-height: 1.7;
+    max-width: 280px;
+}
+
+.footer-links li { margin-bottom: 10px; }
+.footer-links a  { font-size: 14px; text-decoration: none; transition: 0.2s; }
+.footer-links a:hover { color: var(--cyan) !important; }
+
+.footer-social {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.footer-social:hover {
+    color: var(--cyan) !important;
+    border-color: rgba(0, 209, 255, 0.3);
+}
+
+.footer-divider { border-color: rgba(255, 255, 255, 0.06); }

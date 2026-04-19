@@ -1,0 +1,59 @@
+/* ================================
+   PROJECTS — Cards de proyectos
+   ================================ */
+
+.project-card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: 0.3s;
+    height: 100%;
+}
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 209, 255, 0.2);
+}
+
+.project-info    { padding: 0 4px 4px; }
+.project-desc    { line-height: 1.6; color: #94a3b8 !important; }
+.project-id      { color: #475569 !important; }
+
+.tech-tag {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 50px;
+    background: rgba(15, 23, 42, 0.85);
+    color: var(--cyan);
+    border: 1px solid rgba(0, 209, 255, 0.25);
+    backdrop-filter: blur(4px);
+}
+
+.btn-project-gh {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.2s;
+}
+.btn-project-gh:hover {
+    color: var(--cyan);
+    border-color: rgba(0, 209, 255, 0.3);
+}
+
+/* Card en progreso */
+.project-wip {
+    border: 1px dashed rgba(0, 209, 255, 0.2) !important;
+    min-height: 280px;
+}
+.wip-icon svg {
+    animation: spin 4s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

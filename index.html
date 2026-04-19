@@ -1,257 +1,636 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fabian Beltran | Portafolio Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="shortcut icon" href="./favicon/favicon_base.png" type="image/png" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <nav class="main-nav" id="navbar">
-      <div class="container d-flex justify-content-between align-items-center h-100">
-        <div class="brand-logo">F<span class="highlight">B</span></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabian Beltran | Portafolio Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="shortcut icon" href="./favicon/favicon_base.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-        <ul class="nav-menu d-none d-lg-flex m-0 align-items-center" id="nav-menu">
-          <li><a href="#habilidades" class="nav-item">Habilidades</a></li>
-          <li><a href="#titulos" class="nav-item">Títulos</a></li>
-          <li><a href="#proyectos" class="nav-item">Proyectos</a></li>
-          <li><a href="#contacto" class="nav-btn-custom">Contacto</a></li>
+<body>
+  <nav class="navbar navbar-expand-lg main-nav" id="navbar">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="#inicio">
+        F<span class="highlight">B</span>
+      </a>
+
+      <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav mx-auto gap-1 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#inicio" class="nav-link nav-custom">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#sobre-mi" class="nav-link nav-custom">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a href="#habilidades" class="nav-link nav-custom">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a href="#proyectos" class="nav-link nav-custom">Proyectos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#titulos" class="nav-link nav-custom">Trayectoria</a>
+          </li>
         </ul>
 
-        <button class="hamburger d-lg-none" id="menu-toggle" aria-label="Abrir menú">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
+        <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+          <a href="https://github.com/TU_USUARIO" target="_blank" class="nav-github">
+            <i class="bi bi-github"></i>
+            GitHub
+          </a>
+          <a href="#contacto" class="nav-btn-custom d-flex align-items-center gap-2">
+            <span class="dot pulse-lime" style="width: 7px; height: 7px"></span>
+            Contacto
+          </a>
+        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main>
-      <header class="hero d-flex align-items-center" id="inicio">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-7 hero-content reveal">
-              <div class="hero-label d-flex align-items-center gap-3 mb-3">
-                <span class="tag text-uppercase">Estudiante de Ingeniería de Software</span>
-                <hr class="line-decorator d-none d-sm-block" />
-              </div>
+  <main>
+    <header class="hero d-flex align-items-center" id="inicio">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <!-- Columna izquierda -->
+          <div class="col-lg-7 hero-content reveal">
+            <div class="hero-label d-flex align-items-center gap-3 mb-3">
+              <span class="tag text-uppercase">Estudiante de Ingeniería de Software</span>
+              <hr class="line-decorator d-none d-sm-block" />
+            </div>
 
-              <h1 class="hero-title text-uppercase">
-                Fabian <br />
-                <span class="text-accent">Beltran</span>
-              </h1>
+            <h1 class="hero-title text-uppercase">
+              Fabian <br />
+              <span class="text-accent">Beltran</span>
+            </h1>
 
-              <div class="hero-actions d-flex gap-3">
-                <a href="#proyectos" class="btn-primary-custom">Explorar Proyectos</a>
-                <a href="#contacto" class="btn-link-custom text-decoration-none">Establecer Contacto_</a>
+            <p class="hero-bio">
+              Construyo el lado que el usuario no ve — pero que hace que todo
+              funcione.<br />
+              Java, Python y MySQL en el backend. Despliegues en producción
+              con Windows Server e IIS.<br />
+              <span class="text-cyan">Clean Code, Git y ganas de seguir aprendiendo.</span>
+            </p>
+
+            <!-- Stack de tecnologías -->
+            <div class="hero-stack d-flex align-items-center gap-2 flex-wrap mb-4">
+              <span class="stack-label">Stack:</span>
+              <span class="stack-pill">Java</span>
+              <span class="stack-pill">Python</span>
+              <span class="stack-pill">MySQL</span>
+              <span class="stack-pill">JavaScript</span>
+              <span class="stack-pill">HTML / CSS</span>
+              <span class="stack-pill">Git</span>
+            </div>
+
+            <!-- CTAs -->
+            <div class="hero-actions d-flex gap-3 flex-wrap">
+              <a href="#proyectos" class="btn-primary-custom">Ver Proyectos</a>
+              <a href="./assets/cv-fabian-beltran.pdf" target="_blank" class="btn-secondary-custom">
+                Descargar CV
+                <i class="bi bi-download"></i>
+              </a>
+            </div>
+
+            <!-- Links sociales -->
+            <div class="hero-socials d-flex gap-3 mt-4">
+              <a href="https://github.com/TU_USUARIO" target="_blank" class="social-link">
+                <i class="bi bi-github"></i>
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/fabian-andres-beltran" target="_blank" class="social-link">
+                <i class="bi bi-linkedin"></i>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="col-lg-5 d-none d-lg-flex flex-column align-items-end gap-3">
+            <div class="status-card reveal">
+              <small>Disponibilidad</small>
+              <div class="status-indicator d-flex align-items-center gap-2 mt-1">
+                <span class="dot pulse-lime"></span>
+                <p class="m-0 fw-bold">Abierto a proyectos</p>
               </div>
             </div>
 
-            <div class="col-lg-5 d-none d-lg-block">
-              <div class="hero-status-cards d-flex flex-column align-items-end gap-3">
-                <div class="status-card reveal">
-                  <small>Disponibilidad</small>
-                  <div class="status-indicator d-flex align-items-center gap-2">
-                    <span class="dot pulse-lime"></span>
-                    <p class="m-0 fw-bold">Abierto a proyectos</p>
-                  </div>
-                </div>
-                <div class="status-card reveal">
-                  <small>Especialidad</small>
-                  <div class="status-indicator d-flex align-items-center gap-2">
-                    <span class="dot pulse-blue"></span>
-                    <p class="m-0 fw-bold">Desarrollo Full-Stack</p>
-                  </div>
-                </div>
+            <div class="status-card reveal">
+              <small>Especialidad</small>
+              <div class="status-indicator d-flex align-items-center gap-2 mt-1">
+                <span class="dot pulse-blue"></span>
+                <p class="m-0 fw-bold">Desarrollo Full-Stack</p>
+              </div>
+            </div>
+
+            <div class="status-card reveal">
+              <small>Formación</small>
+              <div class="status-indicator d-flex align-items-center gap-2 mt-1">
+                <span class="dot" style="background: #7b61ff; box-shadow: 0 0 10px #7b61ff"></span>
+                <p class="m-0 fw-bold">Politécnico Gran colombiano</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="hero-vertical-text d-none d-xl-block">Logica • Estructura • Eficiencia</div>
-      </header>
+      </div>
 
-      <!-- Sección Habilidades -->
-      <section id="habilidades" class="section py-5">
-        <div class="container reveal">
-          <header class="section-header mb-5">
-            <h2 class="section-title h1 fw-black text-uppercase">Skills</h2>
-            <p class="section-subtitle text-cyan">/ Mis herramientas favoritas</p>
-          </header>
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator d-none d-md-flex flex-column align-items-center gap-2">
+        <span class="scroll-text">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
 
-          <div class="row g-4">
-            <!-- Front-End -->
-            <div class="col-md-6">
-              <article class="skills-card h-100">
-                <div class="card-header d-flex align-items-center gap-3 mb-4">
-                  <span class="bracket-cyan h4 m-0">{ }</span>
-                  <h3 class="h5 m-0 text-uppercase">Front-End</h3>
+      <div class="hero-vertical-text d-none d-xl-block">
+        Logica • Estructura • Eficiencia
+      </div>
+    </header>
+
+    <section id="habilidades" class="section py-5">
+      <div class="container reveal">
+        <header class="section-header mb-5">
+          <h2 class="section-title h1 fw-black text-uppercase">
+            Habilidades
+          </h2>
+          <p class="section-subtitle text-cyan">/ Mi stack técnico</p>
+        </header>
+
+        <div class="row g-4">
+          <!-- Frontend -->
+          <div class="col-md-6 col-lg-4">
+            <article class="skills-card h-100">
+              <div class="card-header d-flex align-items-center gap-3 mb-4">
+                <span class="bracket-cyan h4 m-0">{ }</span>
+                <h3 class="h5 m-0 text-uppercase">Front-End</h3>
+              </div>
+              <div class="icons-row d-flex justify-content-around flex-wrap gap-3">
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/html5-original-wordmark.svg" alt="HTML5" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">HTML 5</span>
                 </div>
-                <div class="icons-row d-flex justify-content-around flex-wrap gap-3">
-                  <div class="skill-item text-center">
-                    <div class="icon-box mx-auto"><img src="./assets/icons/javascript-original.svg" alt="JS" /></div>
-                    <span class="d-block mt-2 small fw-bold">JavaScript</span>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/css3-original.svg" alt="CSS3" />
                   </div>
-                  <div class="skill-item text-center">
-                    <div class="icon-box mx-auto"><img src="./assets/icons/html5-original-wordmark.svg" alt="HTML" /></div>
-                    <span class="d-block mt-2 small fw-bold">HTML 5</span>
-                  </div>
-                  <div class="skill-item text-center">
-                    <div class="icon-box mx-auto"><img src="./assets/icons/bootstrap-original.svg" alt="BS" /></div>
-                    <span class="d-block mt-2 small fw-bold">Bootstrap</span>
-                  </div>
+                  <span class="d-block mt-2 small fw-bold">CSS 3</span>
                 </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/javascript-original.svg" alt="JS" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">JavaScript</span>
+                </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/bootstrap-original.svg" alt="Bootstrap" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">Bootstrap</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Backend -->
+          <div class="col-md-6 col-lg-4">
+            <article class="skills-card h-100">
+              <div class="card-header d-flex align-items-center gap-3 mb-4">
+                <span class="bracket-lime h4 m-0">[ ]</span>
+                <h3 class="h5 m-0 text-uppercase">Back-End</h3>
+              </div>
+              <div class="icons-row d-flex justify-content-around flex-wrap gap-3">
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/java-original.svg" alt="Java" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">Java</span>
+                </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/spring-original.svg" alt="Spring" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">Spring</span>
+                </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/python-original.svg" alt="Python" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">Python</span>
+                </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/mysql-original-wordmark.svg" alt="MySQL" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">MySQL</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Herramientas -->
+          <div class="col-md-6 col-lg-4">
+            <article class="skills-card h-100">
+              <div class="card-header d-flex align-items-center gap-3 mb-4">
+                <span class="bracket-purple h4 m-0">( )</span>
+                <h3 class="h5 m-0 text-uppercase">Herramientas</h3>
+              </div>
+              <div class="icons-row d-flex justify-content-around flex-wrap gap-3">
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/git-original.svg" alt="Git" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">Git</span>
+                </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <i class="bi bi-github"></i>
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">GitHub</span>
+                </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/intellij-original.svg" alt="Windows Server" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">Intellij</span>
+                </div>
+                <div class="skill-item text-center">
+                  <div class="icon-box mx-auto">
+                    <img src="./assets/icons/vscode-original.svg" alt="VS Code" />
+                  </div>
+                  <span class="d-block mt-2 small fw-bold">VS Code</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trayectoria" class="section py-5 bg-alt">
+      <div class="container reveal">
+        <header class="section-header mb-5">
+          <h2 class="section-title h1 fw-black text-uppercase">
+            Trayectoria
+          </h2>
+          <p class="section-subtitle text-cyan">/ Mi camino hasta aquí</p>
+        </header>
+
+        <div class="row g-5">
+          <!-- Formación -->
+          <div class="col-md-6">
+            <h3 class="column-title h5 fw-bold mb-4 text-uppercase">
+              Formación
+            </h3>
+            <div class="timeline-items ps-4">
+              <article class="timeline-entry mb-5">
+                <span class="date small text-muted d-block mb-1">Jun 2024 — Actual</span>
+                <h4 class="h5 fw-bold mb-1">Ingeniería de Software</h4>
+                <p class="institution text-cyan mb-2">
+                  Politécnico Grancolombiano
+                </p>
+                <p class="entry-desc small text-muted">
+                  Formación en fundamentos de ingeniería, estructuras de
+                  datos, bases de datos relacionales y desarrollo de software.
+                </p>
+              </article>
+
+              <article class="timeline-entry">
+                <span class="date small text-muted d-block mb-1">Feb 2025 — Actual</span>
+                <h4 class="h5 fw-bold mb-1">Bootcamp Full-Stack Java</h4>
+                <p class="institution text-cyan mb-2">Generation Colombia</p>
+                <p class="entry-desc small text-muted">
+                  Entrenamiento intensivo en Java, Spring Boot, MySQL y
+                  desarrollo web. Enfoque en buenas prácticas, trabajo en
+                  equipo y metodologías ágiles.
+                </p>
               </article>
             </div>
+          </div>
 
-            <div class="col-md-6">
-              <article class="skills-card h-100">
-                <div class="card-header d-flex align-items-center gap-3 mb-4">
-                  <span class="bracket-lime h4 m-0">[ ]</span>
-                  <h3 class="h5 m-0 text-uppercase">Backend</h3>
-                </div>
-                <div class="icons-row d-flex justify-content-around flex-wrap gap-3">
-                  <div class="skill-item text-center">
-                    <div class="icon-box mx-auto"><img src="./assets/icons/java-original.svg" alt="Java" /></div>
-                    <span class="d-block mt-2 small fw-bold">Java</span>
-                  </div>
-                  <div class="skill-item text-center">
-                    <div class="icon-box mx-auto"><img src="./assets/icons/python-original.svg" alt="Python" /></div>
-                    <span class="d-block mt-2 small fw-bold">Python</span>
-                  </div>
-                  <div class="skill-item text-center">
-                    <div class="icon-box mx-auto"><img src="./assets/icons/mysql-original-wordmark.svg" alt="MySQL" /></div>
-                    <span class="d-block mt-2 small fw-bold">MySQL</span>
-                  </div>
-                </div>
+          <!-- Experiencia -->
+          <div class="col-md-6">
+            <h3 class="column-title h5 fw-bold mb-4 text-uppercase" style="color: var(--lime)">
+              Experiencia
+            </h3>
+            <div class="timeline-items ps-4">
+              <article class="timeline-entry active mb-5">
+                <span class="date-highlight text-lime small d-block mb-1">Experiencia previa</span>
+                <h4 class="h5 fw-bold mb-1">Soporte IT</h4>
+                <p class="institution text-cyan mb-2">Sector corporativo</p>
+                <p class="entry-desc small text-muted">
+                  Gestión de infraestructura, despliegue de aplicaciones en
+                  Windows Server e IIS, soporte técnico a usuarios y
+                  mantenimiento de sistemas. Base práctica directamente
+                  aplicable al desarrollo backend.
+                </p>
+              </article>
+
+              <article class="timeline-entry opacity-low">
+                <span class="date-highlight text-lime small d-block mb-1">Próximo paso</span>
+                <h4 class="h5 fw-bold mb-1">Desarrollador Junior</h4>
+                <p class="institution text-muted mb-2">Tu empresa aquí</p>
+                <p class="entry-desc small text-muted">
+                  Buscando mi primera oportunidad en desarrollo — listo para
+                  aportar desde el primer día.
+                </p>
               </article>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="titulos" class="section py-5 bg-alt">
-        <div class="container reveal">
-          <h2 class="section-title text-center h1 fw-black mb-5 text-uppercase">Trayectoria Profesional</h2>
-          <div class="row g-5 mt-2">
-            <div class="col-md-6 timeline-column">
-              <h3 class="column-title h4 fw-bold mb-4">FORMACIÓN</h3>
-              <div class="timeline-items ps-4">
-                <article class="timeline-entry mb-5">
-                  <span class="date small text-muted d-block mb-1">Junio 2024 — Actual</span>
-                  <h4 class="h5 fw-bold">Ingenieria de Software</h4>
-                  <p class="institution text-cyan">Politécnico Grancolombiano</p>
-                </article>
-                <article class="timeline-entry">
-                  <span class="date small text-muted d-block mb-1">Febrero 2025 — Actual</span>
-                  <h4 class="h5 fw-bold">Desarrollador Junior Full-Stack</h4>
-                  <p class="institution text-cyan">Generation Colombia</p>
-                </article>
+    <section id="proyectos" class="section py-5">
+      <div class="container reveal">
+        <header class="section-header mb-5">
+          <h2 class="section-title h1 fw-black text-uppercase">Proyectos</h2>
+          <p class="section-subtitle text-cyan">/ Galería de trabajo</p>
+        </header>
+
+        <div class="row g-4">
+          <!-- Proyecto 1: Carrito de compras -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
+                <img src="https://placehold.co/600x340/1e293b/00d1ff?text=Carrito+de+Compras" class="img-fluid"
+                  alt="Carrito de compras" />
+                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 timeline-column">
-              <h3 class="column-title accent-lime h4 fw-bold mb-4">EXPERIENCIA</h3>
-              <div class="timeline-items ps-4">
-                <article class="timeline-entry active mb-5">
-                  <span class="date-highlight text-lime small d-block mb-1">Actualmente</span>
-                  <h4 class="placeholder-text h5">-----------</h4>
-                  <p class="placeholder-text small">-------------</p>
-                </article>
-                <article class="timeline-entry opacity-low">
-                  <h4 class="placeholder-text h5">------------</h4>
-                  <p class="placeholder-text small">-----------------</p>
-                </article>
+              <div class="project-info">
+                <span class="project-id text-muted small">#001</span>
+                <h3 class="h6 fw-bold mb-1">Carrito de Compras</h3>
+                <p class="project-desc small text-muted mb-3">
+                  Tienda con carrito interactivo — agrega productos, acumula
+                  totales y elimina items en tiempo real.
+                </p>
+                <div class="project-links d-flex gap-2">
+                  <a href="https://github.com/TU_USUARIO/carrito" target="_blank" class="btn-project-gh">
+                    <i class="bi bi-github"></i>
+                    Ver código
+                  </a>
+                </div>
               </div>
-            </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 2: PokeAPI -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
+                <img src="https://placehold.co/600x340/1e293b/c1ff72?text=PokeAPI+Explorer" class="img-fluid"
+                  alt="PokeAPI" />
+                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">REST API</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-id text-muted small">#002</span>
+                <h3 class="h6 fw-bold mb-1">PokeAPI Explorer</h3>
+                <p class="project-desc small text-muted mb-3">
+                  Busca y guarda tus Pokémon favoritos consumiendo la PokeAPI
+                  — fetch, JSON y renderizado dinámico.
+                </p>
+                <div class="project-links d-flex gap-2">
+                  <a href="https://github.com/TU_USUARIO/pokeapi" target="_blank" class="btn-project-gh">
+                    <i class="bi bi-github"></i>
+                    Ver código
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 3: Agencia de viajes -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
+                <img src="https://placehold.co/600x340/1e293b/7b61ff?text=Agencia+de+Viajes" class="img-fluid"
+                  alt="Agencia de viajes" />
+                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Bootstrap</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-id text-muted small">#003</span>
+                <h3 class="h6 fw-bold mb-1">Agencia de Viajes</h3>
+                <p class="project-desc small text-muted mb-3">
+                  Página de viajes con modal de descripción, carrito de
+                  destinos y suma de precios en tiempo real.
+                </p>
+                <div class="project-links d-flex gap-2">
+                  <a href="https://github.com/TU_USUARIO/agencia-viajes" target="_blank" class="btn-project-gh">
+                    <i class="bi bi-github"></i>
+                    Ver código
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Proyecto 4: Conversor de temperaturas -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
+                <img src="https://placehold.co/600x340/1e293b/ff6b6b?text=Conversor+de+Temperaturas" class="img-fluid"
+                  alt="Conversor temperaturas" />
+                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">CSS Animations</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-id text-muted small">#004</span>
+                <h3 class="h6 fw-bold mb-1">Conversor de Temperaturas</h3>
+                <p class="project-desc small text-muted mb-3">
+                  Convierte entre Celsius, Kelvin y Fahrenheit con un
+                  termómetro animado que reacciona en tiempo real.
+                </p>
+                <div class="project-links d-flex gap-2">
+                  <a href="https://github.com/TU_USUARIO/conversor-temp" target="_blank" class="btn-project-gh">
+                    <i class="bi bi-github"></i>
+                    Ver código
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card: En progreso -->
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card project-wip">
+              <div
+                class="wip-content d-flex flex-column align-items-center justify-content-center text-center h-100 py-5">
+                <div class="wip-icon mb-3">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                  </svg>
+                </div>
+                <span class="wip-label text-cyan small fw-bold text-uppercase mb-2">En progreso</span>
+                <p class="text-muted small mb-0">
+                  Nuevos proyectos en camino — vuelve pronto.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="proyectos" class="section py-5">
-        <div class="container reveal">
-          <header class="section-header mb-5">
-            <h2 class="section-title h1 fw-black text-uppercase">Proyectos</h2>
-            <p class="section-subtitle text-cyan">/ Galería de Trabajo</p>
-          </header>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="project-card">
-                <div class="project-img overflow-hidden rounded-4 mb-3">
-                  <img src="https://placehold.co/600x400" class="img-fluid" alt="Proyecto" />
-                </div>
-                <div class="project-info d-flex justify-content-between align-items-center">
+    <section id="contacto" class="section py-5 bg-alt">
+      <div class="container reveal">
+        <header class="section-header mb-5 text-center">
+          <h2 class="section-title h1 fw-black text-uppercase">Contacto</h2>
+          <p class="section-subtitle text-cyan">/ Hablemos</p>
+          <p class="contact-intro text-muted mt-3 mx-auto">
+            Estoy buscando mi primera oportunidad en desarrollo — si tienes un
+            proyecto o una vacante, escríbeme y respondo en menos de 24 horas.
+          </p>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-list d-flex flex-column gap-3">
+              <!-- Email -->
+              <a href="fabian.beltranv@outlook.com"
+                class="contact-item d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="contact-icon">
+                    <i class="bi bi-envelope"></i>
+                  </div>
                   <div>
-                    <span class="project-id text-muted small">#001</span>
-                    <h3 class="h6 m-0 fw-bold">Lorem Ipsum Dolor</h3>
-                  </div>
-                  <a href="#" class="project-link"><img src="./assets/icons/arrow-right.svg" width="20" alt="Go" /></a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto" class="section py-5">
-        <div class="container reveal text-center">
-          <h2 class="section-title h1 fw-black text-uppercase mb-5">Contacto</h2>
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <div class="contact-list d-flex flex-column gap-3 text-start">
-                
-                <a href="fabian.beltranv@outlook.com" class="contact-item d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center gap-3">
                     <span class="num small fw-bold">01 //</span>
                     <h3 class="h5 m-0 fw-black text-uppercase">E-mail</h3>
                   </div>
-                  <span class="contact-val d-none d-md-block text-muted">fabian.beltranv@outlook.com</span>
-                </a>
+                </div>
+                <span class="contact-val d-none d-md-block">fabian.beltranv@outlook.com</span>
+              </a>
 
-                <a href="https://wa.me/573107038637" target="_blank" class="contact-item accent-lime d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center gap-3">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/573107038637" target="_blank"
+                class="contact-item accent-lime d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="contact-icon">
+                    <i class="bi bi-whatsapp"></i>
+                  </div>
+                  <div>
                     <span class="num small fw-bold">02 //</span>
                     <h3 class="h5 m-0 fw-black text-uppercase">WhatsApp</h3>
                   </div>
-                  <span class="contact-val d-none d-md-block text-muted">+57 310-703-8637</span>
-                </a>
+                </div>
+                <span class="contact-val d-none d-md-block">+57 310-703-8637</span>
+              </a>
 
-                <a href="https://linkedin.com/in/..." target="_blank" class="contact-item accent-purple d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center gap-3">
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/fabian-andres-beltran" target="_blank"
+                class="contact-item accent-purple d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="contact-icon">
+                    <i class="bi bi-linkedin"></i>
+                  </div>
+                  <div>
                     <span class="num small fw-bold">03 //</span>
                     <h3 class="h5 m-0 fw-black text-uppercase">LinkedIn</h3>
                   </div>
-                  <span class="contact-val d-none d-md-block text-muted">fabian-andres-beltran</span>
-                </a>
+                </div>
+                <span class="contact-val d-none d-md-block">fabian-andres-beltran</span>
+              </a>
+            </div>
 
-              </div>
+            <!-- Botón CV -->
+            <div class="text-center mt-5">
+              <a href="./assets/cv-fabian-beltran.pdf" target="_blank" class="btn-cv-download">
+                <i class="bi bi-download"></i>
+                Descargar CV en PDF
+              </a>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer py-5 border-top border-secondary">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <div class="brand-logo h3 fw-black">Fabian <span class="text-cyan">Beltran</span></div>
+  <footer class="footer py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <!-- Logo + bio -->
+        <div class="col-md-4">
+          <div class="brand-logo h4 fw-black mb-2">
+            Fabian <span class="text-cyan">Beltran</span>
           </div>
-          <div class="col-md-6">
-            <ul class="nav justify-content-center justify-content-md-end gap-3">
-              <li><a href="#habilidades" class="text-muted small text-decoration-none">Habilidades</a></li>
-              <li><a href="#titulos" class="text-muted small text-decoration-none">Títulos</a></li>
-              <li><a href="#proyectos" class="text-muted small text-decoration-none">Proyectos</a></li>
-              <li><a href="#contacto" class="text-muted small text-decoration-none">Contacto</a></li>
-            </ul>
+          <p class="footer-bio text-muted small mb-3">
+            Desarrollador Fullstack Junior construyendo soluciones backend con
+            Java y Spring. Buscando mi primera oportunidad en el sector tech.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="https://github.com/TU_USUARIO" target="_blank" class="footer-social">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/fabian-andres-beltran" target="_blank" class="footer-social">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="mailto:fabian.beltranv@outlook.com" class="footer-social">
+              <i class="bi bi-envelope"></i>
+            </a>
           </div>
         </div>
-        <div class="text-center mt-4 text-muted small">© 2025 FABIAN BELTRAN</div>
-      </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
-  </body>
+        <!-- Links de navegación -->
+        <div class="col-md-4 offset-md-1">
+          <h6 class="footer-heading text-uppercase mb-3">Navegación</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#trayectoria">Trayectoria</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Estado -->
+        <div class="col-md-3">
+          <h6 class="footer-heading text-uppercase mb-3">Estado</h6>
+          <div class="footer-status d-flex align-items-center gap-2 mb-2">
+            <span class="dot pulse-lime"></span>
+            <span class="small">Disponible para trabajar</span>
+          </div>
+          <div class="footer-status d-flex align-items-center gap-2">
+            <span class="dot pulse-blue"></span>
+            <span class="small">Bogotá, Colombia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider + copyright -->
+      <hr class="footer-divider mt-5 mb-4" />
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span class="small text-muted">© 2025 Fabian Beltran — Todos los derechos reservados.</span>
+        <span class="small text-muted">Hecho con <span class="text-cyan">código</span> y café ☕</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>

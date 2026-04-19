@@ -1,0 +1,46 @@
+/* ================================
+   TIMELINE — Trayectoria
+   ================================ */
+
+.timeline-items {
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.timeline-entry { position: relative; }
+.timeline-entry::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-card);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+.timeline-entry.active::before {
+    background: var(--lime);
+    border-color: var(--lime);
+}
+
+.entry-desc {
+    line-height: 1.7;
+    border-left: 2px solid rgba(255, 255, 255, 0.05);
+    padding-left: 12px;
+}
+
+.opacity-low { opacity: 0.76; }
+
+/* Fix colores Bootstrap */
+.entry-desc,
+.date,
+.date-highlight,
+.timeline-entry p,
+.timeline-entry span {
+    color: #94a3b8 !important;
+}
+.institution       { color: var(--cyan) !important; }
+.date-highlight    { color: var(--lime) !important; }
+.timeline-entry h4 { color: var(--text-main) !important; }
+.column-title      { color: var(--text-main); }

@@ -1,0 +1,59 @@
+/* ================================
+   BASE — Variables, reset, body
+   Paleta: Carbón + Naranja
+   ================================ */
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-v22-latin-500.woff2') format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-v22-latin-700.woff2') format('woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('../fonts/ibm-plex-mono-v20-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+:root {
+    --bg-dark:    #0d0d0d;
+    --bg-card:    #161616;
+    --bg-alt:     #111111;
+    --accent:     #ff6b35;
+    --accent-2:   #f7c59f;
+    --purple:     #c084fc;
+    --text-main:  #f1f1f1;
+    --text-muted: #888888;
+    --border:     rgba(255, 255, 255, 0.06);
+
+    /* Aliases para compatibilidad con clases existentes */
+    --cyan: #ff6b35;
+    --lime: #f7c59f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    padding-top: 80px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Utilidades globales */
+.text-cyan   { color: var(--cyan); }
+.text-lime   { color: var(--lime) !important; }
+.text-accent { color: var(--cyan); }
+.bg-alt      { background-color: var(--bg-alt); }
+
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.pulse-lime { background: var(--lime); box-shadow: 0 0 10px var(--lime); }
+.pulse-blue { background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
