@@ -85,3 +85,68 @@ contactOffcanvas.addEventListener('touchend', e => {
         bootstrap.Offcanvas.getInstance(contactOffcanvas).hide();
     }
 });
+// ================================
+// Formspree — Formulario de contacto
+// ================================
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formView = document.getElementById('form-view');
+const successView = document.getElementById('success-view');
+const resetBtn = document.getElementById('reset-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        // Estado cargando
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Enviando...';
+
+        try {
+            const response = await fetch('https://formspree.io/f/meenwjbe', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(contactForm)
+            });
+
+            if (response.ok) {
+                // Mostrar éxito con animación
+                formView.style.opacity = '0';
+                formView.style.transition = 'opacity 0.3s';
+                setTimeout(() => {
+                    formView.style.display = 'none';
+                    successView.style.display = 'block';
+                    successView.style.opacity = '0';
+                    successView.style.transition = 'opacity 0.3s';
+                    setTimeout(() => successView.style.opacity = '1', 10);
+                }, 300);
+                contactForm.reset();
+            } else {
+                submitBtn.innerHTML = '<i class="bi bi-exclamation-circle"></i> Error — intenta de nuevo';
+                submitBtn.style.background = '#ef4444';
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="bi bi-send"></i> Enviar mensaje';
+                    submitBtn.style.background = '';
+                }, 3000);
+            }
+        } catch {
+            submitBtn.innerHTML = '<i class="bi bi-exclamation-circle"></i> Sin conexión';
+            submitBtn.disabled = false;
+        }
+    });
+}
+
+// Resetear formulario
+if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+        successView.style.opacity = '0';
+        setTimeout(() => {
+            successView.style.display = 'none';
+            formView.style.display = 'block';
+            setTimeout(() => formView.style.opacity = '1', 10);
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="bi bi-send"></i> Enviar mensaje';
+        }, 300);
+    });
+}
