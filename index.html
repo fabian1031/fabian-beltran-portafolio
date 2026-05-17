@@ -257,37 +257,24 @@
     <section id="trayectoria" class="section py-5 bg-alt">
       <div class="container reveal">
         <header class="section-header mb-5">
-          <h2 class="section-title h1 fw-black text-uppercase">
-            Trayectoria
-          </h2>
+          <h2 class="section-title h1 fw-black text-uppercase">Trayectoria</h2>
           <p class="section-subtitle text-cyan">/ Mi camino hasta aquí</p>
         </header>
 
         <div class="row g-5">
           <!-- Formación -->
           <div class="col-md-6">
-            <h3 class="column-title h5 fw-bold mb-4 text-uppercase">
-              Formación
-            </h3>
+            <h3 class="column-title h5 fw-bold mb-4 text-uppercase">Formación</h3>
             <div class="timeline-items ps-4">
               <article class="timeline-entry mb-5">
                 <span class="date small d-block mb-1">Jun 2024 — Actual</span>
                 <h4 class="h5 fw-bold mb-1">Ingeniería de Software</h4>
                 <p class="institution mb-2">Politécnico Grancolombiano</p>
-                <p class="entry-desc small">
-                  Formación en fundamentos de ingeniería, estructuras de
-                  datos, bases de datos relacionales y desarrollo de software.
-                </p>
               </article>
               <article class="timeline-entry">
                 <span class="date small d-block mb-1">Feb 2025 — Actual</span>
                 <h4 class="h5 fw-bold mb-1">Bootcamp Full-Stack Java</h4>
                 <p class="institution mb-2">Generation Colombia</p>
-                <p class="entry-desc small">
-                  Entrenamiento intensivo en Java, Spring Boot, MySQL y
-                  desarrollo web. Enfoque en buenas prácticas, trabajo en
-                  equipo y metodologías ágiles.
-                </p>
               </article>
             </div>
           </div>
@@ -303,10 +290,7 @@
                 <h4 class="h5 fw-bold mb-1">Soporte IT</h4>
                 <p class="institution mb-2">Sector corporativo</p>
                 <p class="entry-desc small">
-                  Gestión de infraestructura, despliegue de aplicaciones en
-                  Windows Server e IIS, soporte técnico a usuarios y
-                  mantenimiento de sistemas. Base práctica directamente
-                  aplicable al desarrollo backend.
+                  Infraestructura, Windows Server, IIS y soporte técnico a usuarios.
                 </p>
               </article>
               <article class="timeline-entry opacity-low">
@@ -314,8 +298,7 @@
                 <h4 class="h5 fw-bold mb-1">Desarrollador Junior</h4>
                 <p class="institution mb-2">Tu empresa aquí</p>
                 <p class="entry-desc small">
-                  Buscando mi primera oportunidad en desarrollo — listo para
-                  aportar desde el primer día.
+                  Buscando mi primera oportunidad — listo para aportar desde el primer día.
                 </p>
               </article>
             </div>
@@ -333,98 +316,32 @@
         </header>
 
         <div class="project-filters d-flex justify-content-center gap-2 mb-5">
-          <button class="filter-btn active" data-filter="backend">
-            Backend
-          </button>
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
           <button class="filter-btn" data-filter="frontend">Frontend</button>
-          <button class="filter-btn" data-filter="all">Todos</button>
         </div>
 
         <div class="row g-4" id="projects-grid">
-          <!-- Backend 1 -->
+          <!-- Backend 1: sistema de biblioteca -->
           <div class="col-md-6 col-lg-4 project-item" data-category="backend">
             <article class="project-card">
               <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="https://placehold.co/600x340/161616/ff6b35?text=Proyecto+Backend" class="img-fluid"
-                  alt="Proyecto Backend" />
+                <img src="./assets/img-project/sistema-de-turnos.png" class="img-fluid" alt="Sistema Biblioteca" />
                 <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
                   <span class="tech-tag">Java</span>
-                  <span class="tech-tag">Spring Boot</span>
-                </div>
-              </div>
-              <div class="project-info">
-                <span class="project-id small">#005</span>
-                <h3 class="h6 fw-bold mb-1">Próximamente</h3>
-                <p class="project-desc small mb-3">
-                  Proyecto backend en desarrollo — Java, Spring Boot y MySQL.
-                </p>
-                <div class="project-links d-flex gap-2">
-                  <span class="btn-project-gh opacity-50"><i class="bi bi-github"></i> En progreso</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Backend 2 -->
-          <div class="col-md-6 col-lg-4 project-item" data-category="backend">
-            <article class="project-card">
-              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="https://placehold.co/600x340/161616/ff6b35?text=Proyecto+Backend" class="img-fluid"
-                  alt="Proyecto Backend" />
-                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">MySQL</span>
-                </div>
-              </div>
-              <div class="project-info">
-                <span class="project-id small">#006</span>
-                <h3 class="h6 fw-bold mb-1">Próximamente</h3>
-                <p class="project-desc small mb-3">
-                  Proyecto backend en desarrollo — Java, Spring Boot y MySQL.
-                </p>
-                <div class="project-links d-flex gap-2">
-                  <span class="btn-project-gh opacity-50"><i class="bi bi-github"></i> En progreso</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Backend 3 -->
-          <div class="col-md-6 col-lg-4 project-item" data-category="backend">
-            <article class="project-card project-wip">
-              <div
-                class="wip-content d-flex flex-column align-items-center justify-content-center text-center h-100 py-5">
-                <div class="wip-icon mb-3">
-                  <i class="bi bi-gear-wide-connected" style="font-size: 2rem; color: var(--accent)"></i>
-                </div>
-                <span class="small fw-bold text-uppercase mb-2" style="color: var(--accent)">En progreso</span>
-                <p class="small mb-0" style="color: #888">
-                  Nuevos proyectos backend en camino — vuelve pronto.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Frontend 1: Carrito -->
-          <div class="col-md-6 col-lg-4 project-item" data-category="frontend">
-            <article class="project-card">
-              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="https://placehold.co/600x340/1e293b/00d1ff?text=Carrito+de+Compras" class="img-fluid"
-                  alt="Carrito de compras" />
-                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Bootstrap</span>
+                  <span class="tech-tag">POO</span>
                 </div>
               </div>
               <div class="project-info">
                 <span class="project-id small">#001</span>
-                <h3 class="h6 fw-bold mb-1">Carrito de Compras</h3>
+                <h3 class="h6 fw-bold mb-1">Sistema de Turnos</h3>
                 <p class="project-desc small mb-3">
-                  Tienda con carrito interactivo — agrega productos, acumula
-                  totales y elimina items en tiempo real.
+                  Gestión de biblioteca desarrollada en Java puro — aplicando herencia, polimorfismo, encapsulamiento y
+                  abstracción.
                 </p>
                 <div class="project-links d-flex gap-2">
-                  <a href="https://github.com/TU_USUARIO/carrito" target="_blank" class="btn-project-gh">
+                  <a href="https://github.com/fabian1031/Sistema-de-Gestion-de-Turnos-.git" target="_blank"
+                    rel="noopener noreferrer" class="btn-project-gh">
                     <i class="bi bi-github"></i> Ver código
                   </a>
                 </div>
@@ -432,80 +349,59 @@
             </article>
           </div>
 
-          <!-- Frontend 2: PokeAPI -->
+          <!-- Frontend 1: Agencia de viajes -->
           <div class="col-md-6 col-lg-4 project-item" data-category="frontend">
             <article class="project-card">
               <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="https://placehold.co/600x340/1e293b/c1ff72?text=PokeAPI+Explorer" class="img-fluid"
-                  alt="PokeAPI" />
-                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">REST API</span>
-                </div>
-              </div>
-              <div class="project-info">
-                <span class="project-id small">#002</span>
-                <h3 class="h6 fw-bold mb-1">PokeAPI Explorer</h3>
-                <p class="project-desc small mb-3">
-                  Busca y guarda tus Pokémon favoritos consumiendo la PokeAPI
-                  — fetch, JSON y renderizado dinámico.
-                </p>
-                <div class="project-links d-flex gap-2">
-                  <a href="https://github.com/TU_USUARIO/pokeapi" target="_blank" class="btn-project-gh">
-                    <i class="bi bi-github"></i> Ver código
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Frontend 3: Agencia de viajes -->
-          <div class="col-md-6 col-lg-4 project-item" data-category="frontend">
-            <article class="project-card">
-              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="https://placehold.co/600x340/1e293b/7b61ff?text=Agencia+de+Viajes" class="img-fluid"
-                  alt="Agencia de viajes" />
+                <img src="./assets/img-project/image.png" class="img-fluid" alt="Agencia de viajes" />
                 <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
                   <span class="tech-tag">JavaScript</span>
                   <span class="tech-tag">Bootstrap</span>
                 </div>
               </div>
               <div class="project-info">
-                <span class="project-id small">#003</span>
+                <span class="project-id small">#002</span>
                 <h3 class="h6 fw-bold mb-1">Agencia de Viajes</h3>
                 <p class="project-desc small mb-3">
                   Página de viajes con modal de descripción, carrito de
                   destinos y suma de precios en tiempo real.
                 </p>
                 <div class="project-links d-flex gap-2">
-                  <a href="https://github.com/TU_USUARIO/agencia-viajes" target="_blank" class="btn-project-gh">
+                  <a href="https://github.com/fabian1031/tienda-online-interactiva.git" target="_blank"
+                    rel="noopener noreferrer" class="btn-project-gh">
                     <i class="bi bi-github"></i> Ver código
+                  </a>
+                  <a href="https://tienda-online-interactiva.vercel.app/#" target="_blank" rel="noopener noreferrer"
+                    class="btn-project-demo">
+                    <i class="bi bi-play-fill"></i> Demo
                   </a>
                 </div>
               </div>
             </article>
           </div>
 
-          <!-- Frontend 4: Conversor -->
-          <div class="col-md-6 col-lg-4 project-item" data-category="frontend">
+          <div class="col-md-6 col-lg-4 project-item" data-category="fullstack">
             <article class="project-card">
               <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="https://placehold.co/600x340/1e293b/ff6b6b?text=Conversor+de+Temperaturas" class="img-fluid"
-                  alt="Conversor temperaturas" />
+                <img src="./assets/img-project/e-commerce.png" class="img-fluid" alt="Nombre proyecto" />
+                <div class="position-absolute top-0 start-0 p-2">
+                  <span class="badge bg-warning text-dark">🚧 En construcción</span>
+                </div>
                 <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">CSS Animations</span>
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">React</span>
                 </div>
               </div>
               <div class="project-info">
-                <span class="project-id small">#004</span>
-                <h3 class="h6 fw-bold mb-1">Conversor de Temperaturas</h3>
+                <span class="project-id small">#003</span>
+                <h3 class="h6 fw-bold mb-1">Coroto</h3>
                 <p class="project-desc small mb-3">
-                  Convierte entre Celsius, Kelvin y Fahrenheit con un
-                  termómetro animado que reacciona en tiempo real.
+                  e-commerce
                 </p>
                 <div class="project-links d-flex gap-2">
-                  <a href="https://github.com/TU_USUARIO/conversor-temp" target="_blank" class="btn-project-gh">
+                  <a href="https://github.com/fabian1031/generation-proyecto-final-ecommerce-grupo9.git" target="_blank"
+                    rel="noopener noreferrer" class="btn-project-gh">
                     <i class="bi bi-github"></i> Ver código
                   </a>
                 </div>
@@ -513,22 +409,6 @@
             </article>
           </div>
 
-          <!-- En progreso general -->
-          <div class="col-md-6 col-lg-4 project-item" data-category="all">
-            <article class="project-card project-wip">
-              <div
-                class="wip-content d-flex flex-column align-items-center justify-content-center text-center h-100 py-5">
-                <div class="wip-icon mb-3">
-                  <i class="bi bi-gear-wide-connected" style="font-size: 2rem; color: var(--accent)"></i>
-                </div>
-                <span class="wip-label small fw-bold text-uppercase mb-2" style="color: var(--accent)">En
-                  progreso</span>
-                <p class="small mb-0" style="color: #888">
-                  Nuevos proyectos en camino — vuelve pronto.
-                </p>
-              </div>
-            </article>
-          </div>
         </div>
         <!-- fin row -->
       </div>

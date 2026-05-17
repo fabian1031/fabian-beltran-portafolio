@@ -19,7 +19,7 @@ filterBtns.forEach(btn => {
 });
 
 // Activar filtro backend al cargar
-document.querySelector('[data-filter="backend"]').click();
+document.querySelector('[data-filter="all"]').click();
 
 // ================================
 // Cerrar mobile menu al hacer click en un link
