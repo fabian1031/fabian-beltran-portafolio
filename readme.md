@@ -141,17 +141,17 @@ npm install
 ### Backend
 | # | Proyecto | Stack |
 |---|---------|-------|
-| 005 | Sistema de Biblioteca | Java, POO |
-| 006 | Proximamente | Java, Spring Boot, MySQL |
-| 007 | En progreso | Java, Spring Boot |
+| 001 | Sistema de Turnos | Java, POO |
 
 ### Frontend
 | # | Proyecto | Stack |
 |---|---------|-------|
-| 001 | Carrito de Compras | JavaScript, Bootstrap |
-| 002 | PokeAPI Explorer | JavaScript, REST API |
-| 003 | Agencia de Viajes | JavaScript, Bootstrap |
-| 004 | Conversor de Temperaturas | JavaScript, CSS Animations |
+| 002 | Agencia de Viajes | JavaScript, Bootstrap, CSS |
+
+### Fullstack
+| # | Proyecto | Stack |
+|---|---------|-------|
+| 003 | En construccion | En desarrollo |
 
 ---
 
