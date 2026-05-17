@@ -7,10 +7,8 @@ const projectItems = document.querySelectorAll('.project-item');
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
-
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         projectItems.forEach(item => {
             const show = filter === 'all' || item.dataset.category === filter || item.dataset.category === 'all';
             item.classList.toggle('d-none', !show);
@@ -58,7 +56,6 @@ window.addEventListener('scroll', () => {
         : 'rgba(255,255,255,0.06)';
 });
 
-
 // ================================
 // Widget flotante — cerrar panel al abrir offcanvas
 // ================================
@@ -85,6 +82,24 @@ contactOffcanvas.addEventListener('touchend', e => {
         bootstrap.Offcanvas.getInstance(contactOffcanvas).hide();
     }
 });
+
+// ================================
+// Offcanvas mobile — bottom en mobile, end en desktop
+// ================================
+function adjustOffcanvas() {
+    const el = document.getElementById('contactOffcanvas');
+    if (window.innerWidth <= 576) {
+        el.classList.remove('offcanvas-end');
+        el.classList.add('offcanvas-bottom');
+    } else {
+        el.classList.remove('offcanvas-bottom');
+        el.classList.add('offcanvas-end');
+    }
+}
+
+adjustOffcanvas();
+window.addEventListener('resize', adjustOffcanvas);
+
 // ================================
 // Formspree — Formulario de contacto
 // ================================
@@ -98,7 +113,6 @@ if (contactForm) {
     contactForm.addEventListener('submit', async e => {
         e.preventDefault();
 
-        // Estado cargando
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Enviando...';
 
@@ -110,7 +124,6 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                // Mostrar éxito con animación
                 formView.style.opacity = '0';
                 formView.style.transition = 'opacity 0.3s';
                 setTimeout(() => {
@@ -137,7 +150,6 @@ if (contactForm) {
     });
 }
 
-// Resetear formulario
 if (resetBtn) {
     resetBtn.addEventListener('click', () => {
         successView.style.opacity = '0';
@@ -150,3 +162,86 @@ if (resetBtn) {
         }, 300);
     });
 }
+
+// ================================
+// GSAP — Registro ScrollTrigger
+// ================================
+gsap.registerPlugin(ScrollTrigger);
+
+// ================================
+// GSAP — Hero
+// ================================
+gsap.from('.hero-label', {
+    opacity: 0, y: -20, duration: 0.6, delay: 0.2
+});
+gsap.from('.hero-title', {
+    opacity: 0, x: -60, duration: 0.8, delay: 0.4
+});
+gsap.from('.hero-bio', {
+    opacity: 0, x: -60, duration: 0.8, delay: 0.6
+});
+gsap.from('.hero-stack', {
+    opacity: 0, y: 20, duration: 0.6, delay: 0.8
+});
+gsap.from('.hero-actions', {
+    opacity: 0, y: 20, duration: 0.6, delay: 1.0
+});
+gsap.from('.hero-socials', {
+    opacity: 0, y: 20, duration: 0.6, delay: 1.2
+});
+gsap.from('.status-card', {
+    opacity: 0, x: 60, duration: 0.8, delay: 0.6, stagger: 0.2
+});
+
+// ================================
+// GSAP — Habilidades
+// ================================
+gsap.from('#habilidades .section-title', {
+    scrollTrigger: { trigger: '#habilidades', start: 'top 85%', toggleActions: 'play none none none' },
+    opacity: 0, y: -30, duration: 0.7
+});
+
+gsap.utils.toArray('#habilidades .skills-card').forEach((card, i) => {
+    gsap.from(card, {
+        scrollTrigger: { trigger: card, start: 'top 90%', toggleActions: 'play none none none' },
+        opacity: 0, y: 50, duration: 0.7, delay: i * 0.2
+    });
+});
+
+// ================================
+// GSAP — Trayectoria
+// ================================
+gsap.from('#trayectoria .section-title', {
+    scrollTrigger: { trigger: '#trayectoria', start: 'top 85%', toggleActions: 'play none none none' },
+    opacity: 0, scale: 0.8, duration: 0.7
+});
+
+gsap.utils.toArray('#trayectoria .col-md-6:first-child .timeline-entry').forEach((entry, i) => {
+    gsap.from(entry, {
+        scrollTrigger: { trigger: entry, start: 'top 90%', toggleActions: 'play none none none' },
+        opacity: 0, x: -60, duration: 0.7, delay: i * 0.25
+    });
+});
+
+gsap.utils.toArray('#trayectoria .col-md-6:last-child .timeline-entry').forEach((entry, i) => {
+    gsap.from(entry, {
+        scrollTrigger: { trigger: entry, start: 'top 90%', toggleActions: 'play none none none' },
+        opacity: 0, x: 60, duration: 0.7, delay: i * 0.25
+    });
+});
+
+// ================================
+// GSAP — Proyectos
+// ================================
+gsap.from('#proyectos .section-title', {
+    scrollTrigger: { trigger: '#proyectos', start: 'top 85%', toggleActions: 'play none none none' },
+    opacity: 0, y: -30, duration: 0.7
+});
+
+gsap.utils.toArray('#proyectos .project-card').forEach((card, i) => {
+    gsap.from(card, {
+        scrollTrigger: { trigger: card, start: 'top 95%', toggleActions: 'play none none none' },
+        opacity: 0, y: 60, duration: 0.6, delay: i * 0.1
+    });
+});
+
