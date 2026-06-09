@@ -20,7 +20,7 @@
   <nav class="navbar navbar-expand-lg main-nav" id="navbar">
     <div class="container">
       <a class="navbar-brand brand-logo" href="#inicio">
-        F<span class="highlight">B</span>
+        <span class="text-cyan">class</span> FB <span class="text-cyan">{ }</span>
       </a>
 
       <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
@@ -98,7 +98,7 @@
               <a href="https://github.com/fabian1031" target="_blank" rel="noopener noreferrer" class="social-link">
                 <i class="bi bi-github"></i> GitHub
               </a>
-              <a href="https://www.linkedin.com/in/fabian-andres-beltran-vargas-desarrollador-backend/" target="_blank"
+              <a href="https://www.linkedin.com/in/fabian-andres-beltran-vargas-desarrollador-dev" target="_blank"
                 rel="noopener noreferrer" class="social-link">
                 <i class="bi bi-linkedin"></i> LinkedIn
               </a>
@@ -317,23 +317,59 @@
 
         <div class="project-filters d-flex justify-content-center gap-2 mb-5">
           <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="fullstack">Fullstack</button>
           <button class="filter-btn" data-filter="backend">Backend</button>
           <button class="filter-btn" data-filter="frontend">Frontend</button>
         </div>
 
         <div class="row g-4" id="projects-grid">
-          <!-- Backend 1: sistema de biblioteca -->
+          <!-- Fullstack: Coroto -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="fullstack">
+            <article class="project-card">
+              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
+                <img src="./assets/img-project/e-commerce.png" class="img-fluid" alt="Coroto e-commerce" />
+                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <span class="project-id small">#001</span>
+                <h3 class="h6 fw-bold mb-1">Coroto</h3>
+                <p class="project-desc small mb-3">
+                  E-commerce fullstack — backend REST con Spring Boot y Java, frontend con HTML, CSS y Vanilla JS. Desplegado en producción.
+                </p>
+                <div class="project-links d-flex gap-2 flex-wrap">
+                  <a href="https://github.com/fabian1031/generation-proyecto-final-ecommerce-grupo9.git" target="_blank"
+                    rel="noopener noreferrer" class="btn-project-gh">
+                    <i class="bi bi-github"></i> Front
+                  </a>
+                  <a href="https://github.com/fabian1031/coroto-backend.git" target="_blank"
+                    rel="noopener noreferrer" class="btn-project-gh">
+                    <i class="bi bi-github"></i> Back
+                  </a>
+                  <a href="https://coroto.online/" target="_blank" rel="noopener noreferrer"
+                    class="btn-project-demo">
+                    <i class="bi bi-play-fill"></i> Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Backend: sistema de turnos -->
           <div class="col-md-6 col-lg-4 project-item" data-category="backend">
             <article class="project-card">
               <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="./assets/img-project/sistema-de-turnos.png" class="img-fluid" alt="Sistema Biblioteca" />
+                <img src="./assets/img-project/sistema-de-turnos.png" class="img-fluid" alt="Sistema de Turnos" />
                 <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
                   <span class="tech-tag">Java</span>
                   <span class="tech-tag">POO</span>
                 </div>
               </div>
               <div class="project-info">
-                <span class="project-id small">#001</span>
+                <span class="project-id small">#002</span>
                 <h3 class="h6 fw-bold mb-1">Sistema de Turnos</h3>
                 <p class="project-desc small mb-3">
                   Gestión de biblioteca desarrollada en Java puro — aplicando herencia, polimorfismo, encapsulamiento y
@@ -349,7 +385,7 @@
             </article>
           </div>
 
-          <!-- Frontend 1: Agencia de viajes -->
+          <!-- Frontend: Agencia de viajes -->
           <div class="col-md-6 col-lg-4 project-item" data-category="frontend">
             <article class="project-card">
               <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
@@ -380,35 +416,6 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-lg-4 project-item" data-category="fullstack">
-            <article class="project-card">
-              <div class="project-img overflow-hidden rounded-4 mb-3 position-relative">
-                <img src="./assets/img-project/e-commerce.png" class="img-fluid" alt="Nombre proyecto" />
-                <div class="position-absolute top-0 start-0 p-2">
-                  <span class="badge bg-warning text-dark">🚧 En construcción</span>
-                </div>
-                <div class="project-tags position-absolute top-0 end-0 p-2 d-flex gap-1 flex-wrap justify-content-end">
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">Spring Boot</span>
-                  <span class="tech-tag">React</span>
-                </div>
-              </div>
-              <div class="project-info">
-                <span class="project-id small">#003</span>
-                <h3 class="h6 fw-bold mb-1">Coroto</h3>
-                <p class="project-desc small mb-3">
-                  e-commerce
-                </p>
-                <div class="project-links d-flex gap-2">
-                  <a href="https://github.com/fabian1031/generation-proyecto-final-ecommerce-grupo9.git" target="_blank"
-                    rel="noopener noreferrer" class="btn-project-gh">
-                    <i class="bi bi-github"></i> Ver código
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
         </div>
         <!-- fin row -->
       </div>
@@ -431,7 +438,7 @@
           <div class="d-flex gap-3">
             <a href="https://github.com/fabian1031" target="_blank" rel="noopener noreferrer" class="footer-social"><i
                 class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/fabian-andres-beltran-vargas-desarrollador-backend/" target="_blank"
+            <a href="https://www.linkedin.com/in/fabian-andres-beltran-vargas-desarrollador-dev" target="_blank"
               rel="noopener noreferrer" class="footer-social"><i class="bi bi-linkedin"></i></a>
             <a href="mailto:fabian.beltranv@outlook.com" class="footer-social"><i class="bi bi-envelope"></i></a>
           </div>
@@ -493,7 +500,7 @@
         </div>
         <div><span>WhatsApp</span><small>+57 310-703-8637</small></div>
       </a>
-      <a href="https://www.linkedin.com/in/fabian-andres-beltran-vargas-desarrollador-backend/" target="_blank"
+      <a href="https://www.linkedin.com/in/fabian-andres-beltran-vargas-desarrollador-dev" target="_blank"
         rel="noopener noreferrer" class="chat-link">
         <div class="chat-link-icon li-icon">
           <i class="bi bi-linkedin"></i>
